@@ -14,5 +14,4 @@ defmodule Sender do
     |> Task.async_stream(&send_email/1, ordered: false, on_timeout: :kill_task)
     |> Enum.to_list()
   end
-
 end
